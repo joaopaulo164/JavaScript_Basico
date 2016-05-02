@@ -1,14 +1,12 @@
 /**
- * Created by Joao on 29/04/2016.
+ * Created by Joao on 02/05/2016.
  */
 
-// IMC = peso / altura * altura
-
-
 var trsPacientes = document.getElementsByClassName("paciente"); // array
-console.log(trsPacientes);
 
-percorreArray(trsPacientes, function(pacienteTr){
+percorreArray(trsPacientes, imprimeNome);
+
+function imprimeNome(pacienteTr){
     var tdnome = pacienteTr.getElementsByClassName("info-nome")[0];
     var tdpeso = pacienteTr.getElementsByClassName("info-peso")[0];
     var tdaltura = pacienteTr.getElementsByClassName("info-altura")[0];
@@ -28,17 +26,5 @@ percorreArray(trsPacientes, function(pacienteTr){
             }
         }
     };
-
-    var imc = pacienteAtual.pegaIMC();
-
-    var tdimc = pacienteTr.getElementsByClassName("info-imc")[0];
-    tdimc.textContent = imc;
-    console.log(imc);
-});
-
-
-
-
-
-
-
+    console.log(pacienteAtual.nome)
+}
