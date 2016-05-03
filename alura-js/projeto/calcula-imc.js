@@ -27,8 +27,7 @@ botao.addEventListener("click", function(){
                     var imc = this.peso / (this.altura * this.altura);
                     return imc;
                 } else{
-
-                    console("Não posso dividir por zero!");
+                    console.log("Não posso dividir por zero!");
                 }
             }
         };
